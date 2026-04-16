@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>💱 Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <div class="background">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+    </div>
+
+    <div class="container">
+
+      <header>
+        <div class="logo">💱</div>
+        <h1>Currency<br/><span>Converter</span></h1>
+        <p class="subtitle">Real-time exchange rates, powered by a Node.js backend</p>
+      </header>
+
+      <div class="card">
+
+        <!-- Amount Input -->
+        <div class="input-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter amount e.g. 100" min="0" />
+        </div>
+
+        <!-- Currency Selectors -->
+        <div class="selectors">
+          <div class="input-group">
+            <label for="from">From</label>
+            <select id="from"></select>
+          </div>
+
+          <!-- Swap Button -->
+          <button class="swap-btn" id="swapBtn" title="Swap currencies">⇄</button>
+
+          <div class="input-group">
+            <label for="to">To</label>
+            <select id="to"></select>
+          </div>
+        </div>
+
+        <!-- Convert Button -->
+        <button class="convert-btn" id="convertBtn">Convert</button>
+
+        <!-- Result Display -->
+        <div class="result" id="result">
+          <div class="result-placeholder">Your result will appear here ✨</div>
+        </div>
+
+      </div>
+
+      <footer>
+        <p>Frontend talks to a Node.js backend → Backend calls ExchangeRate API → Result comes back here</p>
+      </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
